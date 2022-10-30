@@ -1,5 +1,8 @@
+import 'dart:developer';
+
 import 'package:flutter/material.dart';
 import 'package:firebase_core/firebase_core.dart';
+import 'package:instantgram/state/auth/backend/authenticator.dart';
 import 'firebase_options.dart';
 
 void main() async {
@@ -28,7 +31,7 @@ class App extends StatelessWidget {
         brightness: Brightness.dark,
         primarySwatch: Colors.blue,
       ),
-      home: HomePage(),
+      home: const HomePage(),
     );
   }
 }
@@ -41,7 +44,18 @@ class HomePage extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         centerTitle: true,
-        title: Text('Home'),
+        title: const Text('Home'),
+      ),
+      body: Column(
+        children: [
+          TextButton(
+            onPressed: () async {
+              final result = await Authenticator().loginWithGoogle();
+              log(result.toString());
+            },
+            child: const Text('Sign in with Google'),
+          )
+        ],
       ),
     );
   }

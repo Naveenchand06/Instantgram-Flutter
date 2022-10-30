@@ -14,6 +14,14 @@
       },
       "oauth_client": [
         {
+          "client_id": "450670153488-p7adgd1l8jbd3krosssr5a33353oinhh.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.naveenchand.instantgram",
+            "certificate_hash": "a086a0c048a73950467d5a87c5a59b1c492fcb0a"
+          }
+        },
+        {
           "client_id": "450670153488-qg1tla49llno6pfdap2i22aoldmk2n0a.apps.googleusercontent.com",
           "client_type": 3
         }
@@ -29,6 +37,13 @@
             {
               "client_id": "450670153488-qg1tla49llno6pfdap2i22aoldmk2n0a.apps.googleusercontent.com",
               "client_type": 3
+            },
+            {
+              "client_id": "450670153488-fqgqeivporm5egosgk88qucrugk0ec5o.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.naveenchand.instantgram"
+              }
             }
           ]
         }

@@ -1,6 +1,4 @@
 import 'dart:async';
-import 'dart:developer';
-
 import 'package:flutter/material.dart';
 import 'package:instantgram/views/components/constants/loading/loading_screen_controller.dart';
 import 'package:instantgram/views/components/constants/strings.dart';

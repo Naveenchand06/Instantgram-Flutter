@@ -2,7 +2,6 @@ import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:flutter/material.dart';
 import 'package:instantgram/state/auth/providers/auth_state_provider.dart';
 import 'package:instantgram/views/components/constants/app_colors.dart';
-import 'package:instantgram/views/components/constants/loading/loading_screen.dart';
 import 'package:instantgram/views/components/constants/strings.dart';
 import 'package:instantgram/views/login/divider_with_margins.dart';
 import 'package:instantgram/views/login/facebook_button.dart';

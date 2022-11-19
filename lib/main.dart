@@ -5,6 +5,7 @@ import 'package:instantgram/state/auth/providers/auth_state_provider.dart';
 import 'package:instantgram/state/auth/providers/is_logged_in_provider.dart';
 import 'package:instantgram/state/providers/is_loading_provider.dart';
 import 'package:instantgram/views/components/constants/loading/loading_screen.dart';
+import 'package:instantgram/views/login/login_view.dart';
 import 'firebase_options.dart';
 import 'dart:developer' as devtools;
 
@@ -44,12 +45,12 @@ class App extends StatelessWidget {
       ),
       home: Consumer(
         builder: (_, ref, child) {
-          /// Displaying loading screen
+          // Displaying loading screen
           ref.listen<bool>(
             isLoadingProvider,
             (previous, isLoading) {
-              if (isLoading) {
-                LoadingScreen.instance().show(context: context);
+              if (isLoading == true) {
+                LoadingScreen.instance().show(context: _);
               } else {
                 LoadingScreen.instance().hide();
               }
@@ -60,6 +61,8 @@ class App extends StatelessWidget {
           if (isLoggedIn) {
             return const MainView();
           } else {
+            LoadingScreen.instance().show(context: context);
+
             return const LoginView();
           }
         },
@@ -85,30 +88,6 @@ class MainView extends ConsumerWidget {
           },
           child: const Text('Logout'),
         ),
-      ),
-    );
-  }
-}
-
-class LoginView extends ConsumerWidget {
-  const LoginView({super.key});
-
-  @override
-  Widget build(BuildContext context, WidgetRef ref) {
-    return Scaffold(
-      appBar: AppBar(
-        centerTitle: true,
-        title: const Text('Login'),
-      ),
-      body: Column(
-        children: [
-          TextButton(
-            onPressed: () async {
-              await ref.read(authStateProvider.notifier).loginWithGoogle();
-            },
-            child: const Text('Sign in with Google'),
-          )
-        ],
       ),
     );
   }

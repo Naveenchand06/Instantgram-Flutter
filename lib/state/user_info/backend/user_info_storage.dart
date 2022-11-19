@@ -7,6 +7,7 @@ import 'package:instantgram/state/user_info/models/user_info_payload.dart';
 
 @immutable
 class UserInfoStorage {
+  // Saving userInfo to firebase collection
   Future<bool> saveUserInfo({
     required UserId userId,
     required String displayName,
@@ -33,6 +34,8 @@ class UserInfoStorage {
         displayName: displayName,
         email: email,
       );
+
+      print('payload is -> $payload');
 
       await FirebaseFirestore.instance
           .collection(FirebaseCollectionName.users)

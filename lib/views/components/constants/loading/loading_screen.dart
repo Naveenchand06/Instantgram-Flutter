@@ -68,9 +68,9 @@ class LoadingScreen {
                     mainAxisSize: MainAxisSize.min,
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      const SizedBox(height: 10),
+                      const SizedBox(height: 20),
                       const CircularProgressIndicator(),
-                      const SizedBox(height: 10),
+                      const SizedBox(height: 20),
                       StreamBuilder(
                         stream: textController.stream,
                         builder: (context, snapshot) {
@@ -85,7 +85,7 @@ class LoadingScreen {
                                   ),
                             );
                           } else {
-                            return Container();
+                            return const SizedBox();
                           }
                         },
                       )

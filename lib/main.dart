@@ -3,6 +3,7 @@ import 'package:firebase_core/firebase_core.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:instantgram/state/auth/providers/auth_state_provider.dart';
 import 'package:instantgram/state/auth/providers/is_logged_in_provider.dart';
+import 'package:instantgram/state/providers/is_loading_provider.dart';
 import 'package:instantgram/views/components/constants/loading/loading_screen.dart';
 import 'firebase_options.dart';
 import 'dart:developer' as devtools;
@@ -43,6 +44,18 @@ class App extends StatelessWidget {
       ),
       home: Consumer(
         builder: (_, ref, child) {
+          /// Displaying loading screen
+          ref.listen<bool>(
+            isLoadingProvider,
+            (previous, isLoading) {
+              if (isLoading) {
+                LoadingScreen.instance().show(context: context);
+              } else {
+                LoadingScreen.instance().hide();
+              }
+            },
+          );
+
           final isLoggedIn = ref.watch(isLoggedInProvider);
           if (isLoggedIn) {
             return const MainView();
@@ -60,7 +73,6 @@ class MainView extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    LoadingScreen.instance().show(context: context, text: 'Hello World');
     return Scaffold(
       appBar: AppBar(
         centerTitle: true,

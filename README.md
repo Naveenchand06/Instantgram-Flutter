@@ -1,6 +1,8 @@
-# instantgram
+# Instantgram
 
 A new Flutter project.
+
+#####Author: Naveenchand.
 
 ## Getting Started
 

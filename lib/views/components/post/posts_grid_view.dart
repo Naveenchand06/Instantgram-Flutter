@@ -19,6 +19,7 @@ class PostsGridView extends StatelessWidget {
         mainAxisSpacing: 8.0,
         crossAxisSpacing: 8.0,
       ),
+      itemCount: posts.length,
       itemBuilder: (context, index) {
         final post = posts.elementAt(index);
         return PostThumbnailView(

@@ -61,8 +61,6 @@ class App extends StatelessWidget {
           if (isLoggedIn) {
             return const MainView();
           } else {
-            LoadingScreen.instance().show(context: context);
-
             return const LoginView();
           }
         },

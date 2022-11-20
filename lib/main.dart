@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
-import 'package:instantgram/state/auth/providers/auth_state_provider.dart';
 import 'package:instantgram/state/auth/providers/is_logged_in_provider.dart';
 import 'package:instantgram/state/providers/is_loading_provider.dart';
 import 'package:instantgram/views/components/constants/loading/loading_screen.dart';
 import 'package:instantgram/views/login/login_view.dart';
+import 'package:instantgram/views/main/main_view.dart';
 import 'firebase_options.dart';
 import 'dart:developer' as devtools;
 
@@ -66,28 +66,6 @@ class App extends StatelessWidget {
             return const LoginView();
           }
         },
-      ),
-    );
-  }
-}
-
-class MainView extends ConsumerWidget {
-  const MainView({super.key});
-
-  @override
-  Widget build(BuildContext context, WidgetRef ref) {
-    return Scaffold(
-      appBar: AppBar(
-        centerTitle: true,
-        title: const Text('Main'),
-      ),
-      body: Center(
-        child: TextButton(
-          onPressed: () async {
-            await ref.read(authStateProvider.notifier).logOut();
-          },
-          child: const Text('Logout'),
-        ),
       ),
     );
   }

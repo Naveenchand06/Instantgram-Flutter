@@ -37,6 +37,7 @@ final postCommentsProvider =
   });
 
   ref.onDispose(() {
+    sub.cancel();
     controller.close();
   });
 

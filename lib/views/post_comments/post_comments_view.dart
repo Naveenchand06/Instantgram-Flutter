@@ -9,7 +9,7 @@ import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:instantgram/views/components/animations/empty_contents_animation_view.dart';
 import 'package:instantgram/views/components/animations/error_animation_view.dart';
 import 'package:instantgram/views/components/animations/loading_animation_view.dart';
-import 'package:instantgram/views/components/commnets/comment_tile.dart';
+import 'package:instantgram/views/components/comments/comment_tile.dart';
 import 'package:instantgram/views/components/constants/strings.dart';
 import 'package:instantgram/views/extensions/dismiss_keyboard.dart';
 

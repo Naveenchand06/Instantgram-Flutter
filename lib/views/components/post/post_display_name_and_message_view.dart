@@ -5,9 +5,9 @@ import 'package:instantgram/state/user_info/providers/user_info_model_provider.d
 import 'package:instantgram/views/components/animations/small_error_animation_view.dart';
 import 'package:instantgram/views/components/rich_two_parts.dart';
 
-class PostDisplayNameAndMessage extends ConsumerWidget {
+class PostDisplayNameAndMessageView extends ConsumerWidget {
   final Post post;
-  const PostDisplayNameAndMessage({
+  const PostDisplayNameAndMessageView({
     super.key,
     required this.post,
   });

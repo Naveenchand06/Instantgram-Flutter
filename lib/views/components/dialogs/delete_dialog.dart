@@ -10,8 +10,8 @@ class DeleteDialog extends AlertDialogModel<bool> {
           message:
               '${Strings.areYouSureYouWantToDeleteThis} $titleOfObjectToDelete',
           buttons: const {
-            Strings.delete: true,
             Strings.cancel: false,
+            Strings.delete: true,
           },
         );
 }

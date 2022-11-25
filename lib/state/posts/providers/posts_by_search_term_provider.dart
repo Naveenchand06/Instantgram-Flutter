@@ -7,7 +7,7 @@ import 'package:instantgram/state/constants/firebase_field_name.dart';
 import 'package:instantgram/state/posts/models/post.dart';
 import 'package:instantgram/state/posts/typedefs/search_term.dart';
 
-final postsBySearchTermrovider = StreamProvider.family
+final postsBySearchTermProvider = StreamProvider.family
     .autoDispose<Iterable<Post>, Searchterm>((ref, Searchterm searchTerm) {
   final controller = StreamController<Iterable<Post>>();
 

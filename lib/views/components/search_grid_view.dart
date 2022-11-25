@@ -6,6 +6,7 @@ import 'package:instantgram/views/components/animations/empty_contents_with_text
 import 'package:instantgram/views/components/animations/error_animation_view.dart';
 import 'package:instantgram/views/components/constants/strings.dart';
 import 'package:instantgram/views/components/post/posts_grid_view.dart';
+import 'package:instantgram/views/components/post/posts_sliver_grid_view.dart';
 
 class SearchGridView extends ConsumerWidget {
   final String searchTerm;
@@ -17,8 +18,10 @@ class SearchGridView extends ConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     if (searchTerm.isEmpty) {
-      return const EmptyContentsWithTextAnimationView(
-        text: Strings.enterYourSearchTerm,
+      return const SliverToBoxAdapter(
+        child: EmptyContentsWithTextAnimationView(
+          text: Strings.enterYourSearchTerm,
+        ),
       );
     }
 
@@ -27,16 +30,20 @@ class SearchGridView extends ConsumerWidget {
     return posts.when(
       data: (posts) {
         if (posts.isEmpty) {
-          return const DataNotFoundAnimationView();
+          return const SliverToBoxAdapter(
+            child: DataNotFoundAnimationView(),
+          );
         } else {
-          return PostsGridView(posts: posts);
+          return PostsSliverGridView(posts: posts);
         }
       },
       error: (error, stackTrace) {
-        return const ErrorAnimationView();
+        return const SliverToBoxAdapter(child: ErrorAnimationView());
       },
-      loading: () => const Center(
-        child: CircularProgressIndicator(),
+      loading: () => const SliverToBoxAdapter(
+        child: Center(
+          child: CircularProgressIndicator(),
+        ),
       ),
     );
   }

@@ -11,6 +11,7 @@ import 'package:instantgram/views/components/constants/strings.dart';
 import 'package:instantgram/views/components/dialogs/alert_dialog_model.dart';
 import 'package:instantgram/views/components/dialogs/logout_dialog.dart';
 import 'package:instantgram/views/create_new_post_view.dart';
+import 'package:instantgram/views/tabs/home/home_view.dart';
 import 'package:instantgram/views/tabs/search/search_view.dart';
 import 'package:instantgram/views/tabs/user_posts/user_posts_view.dart';
 
@@ -110,7 +111,7 @@ class _MainViewState extends ConsumerState<MainView> {
         body: const TabBarView(children: [
           UserPostsView(),
           SearchView(),
-          UserPostsView(),
+          HomeView(),
         ]),
       ),
     );

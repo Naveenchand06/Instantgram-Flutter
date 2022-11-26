@@ -28,7 +28,7 @@ class LikeButton extends ConsumerWidget {
               }
               final likeRequest =
                   LikeDislikeRequest(postId: postId, likedBy: userId);
-              ref.read(likeDislikePostProvider(likeRequest));
+              ref.read(likeDislikePostProvider(request: likeRequest));
             },
             icon: FaIcon(hasLiked
                 ? FontAwesomeIcons.solidHeart

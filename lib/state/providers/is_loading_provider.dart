@@ -1,11 +1,13 @@
-import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:instantgram/state/auth/providers/auth_state_provider.dart';
 import 'package:instantgram/state/comments/providers/delete_comment_provider.dart';
 import 'package:instantgram/state/comments/providers/send_comment_provider.dart';
 import 'package:instantgram/state/image_upload/providers/image_uploader_provider.dart';
 import 'package:instantgram/state/posts/providers/delete_post_provider.dart';
+import 'package:riverpod_annotation/riverpod_annotation.dart';
+part 'is_loading_provider.g.dart';
 
-final isLoadingProvider = Provider<bool>((ref) {
+@riverpod
+bool isLoading(IsLoadingRef ref) {
   final authState = ref.watch(authStateProvider);
   final isUploadingImage = ref.watch(imageUploadProvider);
   final isSendingComment = ref.watch(sendCommentProvider);
@@ -17,4 +19,4 @@ final isLoadingProvider = Provider<bool>((ref) {
       isSendingComment ||
       isDeletingComment ||
       isDeletingPost;
-});
+}

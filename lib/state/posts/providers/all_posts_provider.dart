@@ -27,6 +27,7 @@ final allPostsProvider = StreamProvider.autoDispose<Iterable<Post>>((ref) {
   });
 
   ref.onDispose(() {
+    sub.cancel();
     controller.close();
   });
 

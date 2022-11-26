@@ -5,7 +5,6 @@ import 'package:instantgram/views/components/animations/data_not_found_animation
 import 'package:instantgram/views/components/animations/empty_contents_with_text_animation_view.dart';
 import 'package:instantgram/views/components/animations/error_animation_view.dart';
 import 'package:instantgram/views/components/constants/strings.dart';
-import 'package:instantgram/views/components/post/posts_grid_view.dart';
 import 'package:instantgram/views/components/post/posts_sliver_grid_view.dart';
 
 class SearchGridView extends ConsumerWidget {

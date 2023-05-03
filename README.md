@@ -2,7 +2,7 @@
 
 A new Flutter project.
 
-##### Author: Naveenchand.
+##### Author: [Naveenchand](https://github.com/Naveenchand06).
 
 ## Getting Started
 

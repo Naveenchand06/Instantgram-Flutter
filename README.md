@@ -19,9 +19,14 @@ samples, guidance on mobile development, and a full API reference.
 
 ## Screenshots
 
+<p float="left">
 <img src="https://github.com/Naveenchand06/Instantgram-Flutter/raw/master/assets/screenshots/login.jpeg" width="250" height="500">
 <img src="https://github.com/Naveenchand06/Instantgram-Flutter/raw/master/assets/screenshots/home.jpeg" width="250" height="500">
 <img src="https://raw.githubusercontent.com/Naveenchand06/Instantgram-Flutter/master/assets/screenshots/empty.jpeg" width="250" height="500">
+</p>
+<p float="left">
+
 <img src="https://github.com/Naveenchand06/Instantgram-Flutter/raw/master/assets/screenshots/loading.jpeg" width="250" height="500">
 <img src="https://github.com/Naveenchand06/Instantgram-Flutter/raw/master/assets/screenshots/not-found.jpeg" width="250" height="500">
 <img src="https://github.com/Naveenchand06/Instantgram-Flutter/raw/master/assets/screenshots/post-loading.jpeg" width="250" height="500">
+</p>
